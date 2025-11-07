@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Investigate Dexter's most infamous adversaries with spoiler-aware toggles and detailed dossiers." />
+    <title>Villains | Dexter: Characters &amp; Villains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+    <link rel="preload" href="assets/css/styles.min.css" as="style" />
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
+    <script defer src="assets/js/data.min.js"></script>
+    <script defer src="assets/js/main.min.js"></script>
+  </head>
+  <body data-page="villains">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+      <div class="top-nav">
+        <a class="brand" href="index.html">
+          <span class="brand__marker" aria-hidden="true"></span>
+          <span>Dexter: Characters &amp; Villains</span>
+        </a>
+        <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+          Menu
+        </button>
+        <nav class="nav" aria-label="Main navigation" data-nav>
+          <ul class="nav__list">
+            <li><a class="nav__link" href="index.html" data-nav-link="home">Home</a></li>
+            <li><a class="nav__link" href="characters.html" data-nav-link="characters">Characters</a></li>
+            <li><a class="nav__link" href="villains.html" data-nav-link="villains">Villains</a></li>
+            <li><a class="nav__link" href="timeline.html" data-nav-link="timeline">Timeline</a></li>
+            <li><a class="nav__link" href="about.html" data-nav-link="about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero hero--compact" aria-labelledby="villains-hero-title">
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <p class="hero__subtitle">Antagonists &amp; obsessions</p>
+            <h1 id="villains-hero-title">Villains</h1>
+            <p class="hero__description">From iconic nemeses to one-season specters, these dossiers spotlight the forces who pushed Dexter to his breaking point. Toggle spoiler protection to control how much the darkness reveals.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="main">
+        <div
+          class="spoiler-banner"
+          data-spoiler-banner
+          data-spoiler-banner-key="dexterSpoilerBannerVillains"
+          role="alert"
+        >
+          <span class="spoiler-banner__message">This site discusses major plot points.</span>
+          <button type="button" class="spoiler-banner__dismiss" data-spoiler-dismiss>Dismiss</button>
+        </div>
+
+        <section class="section" aria-labelledby="villain-filter-title">
+          <div class="section__header">
+            <h2 id="villain-filter-title" class="section__title">Hunt the hunters</h2>
+            <p class="section__description">Search, filter, and shield spoilers before you dive into the bloodiest files.</p>
+          </div>
+          <div class="filters" role="region" aria-label="Villain filters">
+            <div class="filters__group">
+              <label class="filters__label" for="villain-search">Search</label>
+              <input
+                class="filters__search"
+                type="search"
+                id="villain-search"
+                name="villain-search"
+                placeholder="Search by name"
+                autocomplete="off"
+                data-search
+                aria-label="Search villains by name"
+              />
+            </div>
+            <div class="filters__group" role="group" aria-label="Filter villains by season">
+              <span class="filters__label">Seasons</span>
+              <label class="season-checkbox">
+                <input type="checkbox" value="1" data-filter-season />
+                <span>1</span>
+              </label>
+              <label class="season-checkbox">
+                <input type="checkbox" value="2" data-filter-season />
+                <span>2</span>
+              </label>
+              <label class="season-checkbox">
+                <input type="checkbox" value="3" data-filter-season />
+                <span>3</span>
+              </label>
+              <label class="season-checkbox">
+                <input type="checkbox" value="4" data-filter-season />
+                <span>4</span>
+              </label>
+              <label class="season-checkbox">
+                <input type="checkbox" value="5" data-filter-season />
+                <span>5</span>
+              </label>
+              <label class="season-checkbox">
+                <input type="checkbox" value="6" data-filter-season />
+                <span>6</span>
+              </label>
+              <label class="season-checkbox">
+                <input type="checkbox" value="7" data-filter-season />
+                <span>7</span>
+              </label>
+              <label class="season-checkbox">
+                <input type="checkbox" value="8" data-filter-season />
+                <span>8</span>
+              </label>
+              <label class="season-checkbox">
+                <input type="checkbox" value="9" data-filter-season />
+                <span>New Blood</span>
+              </label>
+            </div>
+            <div class="filters__group" role="group" aria-label="Spoiler control">
+              <label class="spoiler-toggle">
+                <span class="spoiler-toggle__label">Hide spoilers</span>
+                <span class="switch">
+                  <input
+                    type="checkbox"
+                    id="villain-spoilers"
+                    data-spoiler-toggle
+                    aria-describedby="villain-spoilers-help"
+                  />
+                  <span class="switch__slider" aria-hidden="true"></span>
+                </span>
+              </label>
+              <span id="villain-spoilers-help" class="sr-only">Toggle to blur or reveal spoiler-heavy summaries.</span>
+            </div>
+          </div>
+          <div class="card-grid" data-villain-grid aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer__inner">
+        <div class="footer__top">
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="characters.html">Characters</a>
+            <a href="villains.html">Villains</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="about.html">About</a>
+          </nav>
+          <div class="footer__social" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/cavid-melikzade-371b6a2ab/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in new tab)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6.94 21H3.28V8.5h3.66V21Zm-1.83-14.3a2.12 2.12 0 1 1 0-4.24 2.12 2.12 0 0 1 0 4.24ZM21 21h-3.64v-6.5c0-1.55-.55-2.6-1.93-2.6-1.05 0-1.67.7-1.94 1.39-.1.24-.12.58-.12.92V21h-3.63s.05-11.53 0-12.5h3.63v1.77c.48-.74 1.34-1.8 3.27-1.8 2.39 0 4.2 1.56 4.2 4.9V21Z" fill="#f5f5f5" />
+              </svg>
+            </a>
+            <a href="https://github.com/Javid-co" target="_blank" rel="noopener" aria-label="GitHub (opens in new tab)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.01c-3.35.73-4.05-1.61-4.05-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.26 1.86 1.26 1.08 1.86 2.83 1.32 3.52 1.01.11-.8.42-1.32.76-1.62-2.67-.3-5.47-1.34-5.47-5.94 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.93.43.37.82 1.1.82 2.23v3.3c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" fill="#f5f5f5" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/cavid.xxd/" target="_blank" rel="noopener" aria-label="Instagram (opens in new tab)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M16.75 2h-9.5A5.26 5.26 0 0 0 2 7.25v9.5A5.26 5.26 0 0 0 7.25 22h9.5A5.26 5.26 0 0 0 22 16.75v-9.5A5.26 5.26 0 0 0 16.75 2Zm3.5 14.75a3.5 3.5 0 0 1-3.5 3.5h-9.5a3.5 3.5 0 0 1-3.5-3.5v-9.5a3.5 3.5 0 0 1 3.5-3.5h9.5a3.5 3.5 0 0 1 3.5 3.5v9.5ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.1a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2ZM17.6 6.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z" fill="#f5f5f5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <p class="footer__disclaimer">Fan site for educational purposes. All rights belong to their respective owners.</p>
+        <p class="footer__disclaimer">&copy; <span data-current-year></span> Dexter: Characters &amp; Villains.</p>
+      </div>
+    </footer>
+
+    <div class="modal" data-modal aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__content">
+        <div class="modal__header">
+          <div>
+            <p class="modal__meta" id="modal-type" data-modal-type></p>
+            <h2 id="modal-title" data-modal-title></h2>
+          </div>
+          <button type="button" class="modal__close" data-modal-close aria-label="Close details">Close</button>
+        </div>
+        <p data-modal-summary></p>
+        <div class="modal__meta">
+          <strong>Seasons:</strong>
+          <span data-modal-seasons></span>
+        </div>
+        <div class="modal__meta">
+          <strong>Aliases:</strong>
+          <ul class="modal__list" data-modal-aliases></ul>
+        </div>
+        <div class="modal__meta">
+          <strong>Notable episodes:</strong>
+          <ul class="modal__list" data-modal-episodes></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,234 @@
+const CHARACTERS = [
+  {
+    id: "dexter-morgan",
+    name: "Dexter Morgan",
+    seasons: [1, 2, 3, 4, 5, 6, 7, 8],
+    aliases: ["Bay Harbor Butcher (investigation)"],
+    summary:
+      "Forensic blood-spatter analyst by day and meticulous vigilante by night, Dexter wrestles with a code inherited from his adoptive father to channel his darkness. His double life strains every relationship he holds dear while forcing him to weigh justice against humanity, especially as his secrets ripple across Miami's homicide division.",
+    notableEpisodes: ["S04E12 'The Getaway'", "S08E12 'Remember the Monsters?'"],
+    img: "assets/img/dexter-morgan.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "debra-morgan",
+    name: "Debra Morgan",
+    seasons: [1, 2, 3, 4, 5, 6, 7, 8],
+    aliases: ["Deb"],
+    summary:
+      "Sharp-tongued detective Debra Morgan claws her way through Miami Metro's ranks, driven by loyalty, frustration, and fierce intuition. Her moral compass never stops spinning, especially when cases intersect with Dexter. Debra's journey balances grit with vulnerability as each new discovery tests the boundaries between family, duty, and truth.",
+    notableEpisodes: ["S06E12 'This Is the Way the World Ends'", "S07E12 'Surprise, Motherf***er!'"],
+    img: "assets/img/debra-morgan.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "harry-morgan",
+    name: "Harry Morgan",
+    seasons: [1, 2, 3, 4, 5, 6],
+    aliases: ["Detective Morgan"],
+    summary:
+      "Dexter's adoptive father and moral architect, Harry Morgan designed the infamous Code meant to aim Dexter's dark urges toward the guilty. Appearing in flashbacks and haunted visions, Harry serves as mentor, conscience, and warning, revealing how love, fear, and compromise shaped the monster hunter Dexter became.",
+    notableEpisodes: ["S01E10 'Seeing Red'", "S02E11 'Left Turn Ahead'"],
+    img: "assets/img/harry-morgan.webp",
+    spoilerLevel: "low"
+  },
+  {
+    id: "rita-bennett",
+    name: "Rita Bennett",
+    seasons: [1, 2, 3, 4],
+    aliases: ["Rita Morgan"],
+    summary:
+      "Warm yet guarded, Rita brings a hopeful calm to Dexter's chaotic existence. A survivor rebuilding her life for her children, she anchors the domestic facade Dexter needs. Her open heart, hard-earned trust, and search for stability underscore the stakes of Dexter's secrecy as their family grows.",
+    notableEpisodes: ["S02E05 'The Dark Defender'", "S04E12 'The Getaway'"],
+    img: "assets/img/rita-bennett.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "maria-laguerta",
+    name: "María LaGuerta",
+    seasons: [1, 2, 3, 4, 5, 6, 7],
+    aliases: ["Captain LaGuerta"],
+    summary:
+      "Ambitious and politically savvy, Captain María LaGuerta maneuvers Miami Metro with sharp instincts and strategic alliances. Her relentless pursuit of headline cases often collides with Dexter's secrets, forcing difficult choices about loyalty, justice, and the cost of climbing the command ladder.",
+    notableEpisodes: ["S01E01 'Dexter'", "S07E12 'Surprise, Motherf***er!'"],
+    img: "assets/img/maria-laguerta.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "james-doakes",
+    name: "James Doakes",
+    seasons: [1, 2, 7],
+    aliases: ["Sergeant Doakes"],
+    summary:
+      "Sergeant James Doakes trusts his instincts more than anyone. His suspicion of Dexter becomes an obsession, turning the cat-and-mouse dynamic of the series on its head. Doakes' intensity, decorated past, and unwavering moral line raise the tension around Dexter's carefully balanced double life.",
+    notableEpisodes: ["S02E07 'That Night, a Forest Grew'", "S02E11 'Left Turn Ahead'"],
+    img: "assets/img/james-doakes.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "angel-batista",
+    name: "Angel Batista",
+    seasons: [1, 2, 3, 4, 5, 6, 7, 8],
+    aliases: ["Detective Batista"],
+    summary:
+      "Empathetic and steadfast, Detective Angel Batista provides heart and humor inside Miami Metro. His protective streak and investigative instincts keep him close to the truth without ever quite seeing Dexter's darkness. Batista navigates family, faith, and command responsibilities while trying to keep the team grounded.",
+    notableEpisodes: ["S04E09 'Hungry Man'", "S08E11 'Monkey in a Box'"],
+    img: "assets/img/angel-batista.webp",
+    spoilerLevel: "low"
+  },
+  {
+    id: "vince-masuka",
+    name: "Vince Masuka",
+    seasons: [1, 2, 3, 4, 5, 6, 7, 8],
+    aliases: [],
+    summary:
+      "Forensic tech Vince Masuka blends offbeat humor with razor-sharp lab expertise. Beneath the crude jokes sits a loyal colleague whose meticulous evidence work often shields Dexter from scrutiny. Masuka's unexpected growth and mentorship moments highlight the found family within Miami Metro.",
+    notableEpisodes: ["S04E04 'Dex Takes a Holiday'", "S08E04 'Scar Tissue'"],
+    img: "assets/img/vince-masuka.webp",
+    spoilerLevel: "low"
+  },
+  {
+    id: "joey-quinn",
+    name: "Joey Quinn",
+    seasons: [3, 4, 5, 6, 7, 8],
+    aliases: [],
+    summary:
+      "Detective Joey Quinn is streetwise, impulsive, and often underestimated. His complicated relationships and questionable choices create friction inside the unit, yet his instincts frequently land close to Dexter's orbit. Quinn's evolution shows how loyalty, doubt, and personal connection blur professional lines.",
+    notableEpisodes: ["S05E08 'Take It!'"],
+    img: "assets/img/joey-quinn.webp",
+    spoilerLevel: "low"
+  },
+  {
+    id: "hannah-mckay",
+    name: "Hannah McKay",
+    seasons: [7, 8],
+    aliases: [],
+    summary:
+      "Botanist and elusive poisoner Hannah McKay walks the line between love interest and lethal threat. Her connection with Dexter challenges the Code, inviting him to imagine a different future while rekindling old dangers. Hannah's calm confidence hides a past rife with secrets, survival, and hard choices.",
+    notableEpisodes: ["S07E07 'Chemistry'", "S08E12 'Remember the Monsters?'"],
+    img: "assets/img/hannah-mckay.webp",
+    spoilerLevel: "high"
+  }
+];
+
+const VILLAINS = [
+  {
+    id: "brian-moser",
+    name: "Brian Moser",
+    seasons: [1],
+    aliases: ["Ice Truck Killer"],
+    summary:
+      "Brian Moser orchestrates a chilling puzzle of dismembered clues that draws Dexter toward a buried childhood connection. His calculated artistry and emotional void expose the thin threads separating Dexter’s code from chaos. Brian’s endgame forces Dexter to confront the cost of truth and chosen family loyalties.",
+    notableEpisodes: ["S01E10 'Seeing Red'", "S01E12 'Born Free'"],
+    img: "assets/img/brian-moser.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "miguel-prado",
+    name: "Miguel Prado",
+    seasons: [3],
+    aliases: ["Assistant District Attorney"],
+    summary:
+      "Charismatic prosecutor Miguel Prado befriends Dexter over a shared hunger for justice, only to blur every ethical boundary. His charm masks ambition and volatility, escalating into a deadly partnership that threatens to expose the Code. Miguel's arc spotlights how power, grief, and revenge can twist even noble intentions.",
+    notableEpisodes: ["S03E08 'The Damage a Man Can Do'", "S03E12 'Do You Take Dexter Morgan?'"],
+    img: "assets/img/miguel-prado.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "arthur-mitchell",
+    name: "Arthur Mitchell",
+    seasons: [4],
+    aliases: ["Trinity Killer"],
+    summary:
+      "Arthur Mitchell presents as a devout family man while secretly staging ritualistic killings that span decades. Dexter admires the balancing act he believes Trinity has mastered, only to uncover a nightmare built on abuse and terror. Arthur’s revelations shatter Dexter’s illusions about coexistence with darkness.",
+    notableEpisodes: ["S04E10 'Lost Boys'", "S04E12 'The Getaway'"],
+    img: "assets/img/arthur-mitchell.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "jordan-chase",
+    name: "Jordan Chase",
+    seasons: [5],
+    aliases: ["Self-help magnate"],
+    summary:
+      "Jordan Chase leads a cult-like circle of followers who exploit trauma for twisted thrills. His motivational empire hides decades of manipulation, coercion, and violence. Facing Chase pushes Dexter and Lumen to redefine vengeance and redemption while confronting how charisma conceals predation.",
+    notableEpisodes: ["S05E09 'Teenage Wasteland'", "S05E12 'The Big One'"],
+    img: "assets/img/jordan-chase.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "travis-marshall",
+    name: "Travis Marshall",
+    seasons: [6],
+    aliases: ["Doomsday Killer"],
+    summary:
+      "Art professor Travis Marshall descends into apocalyptic delusion guided by a domineering mentor. Together they stage elaborate tableau murders modeled on Revelation, rattling Miami with prophetic dread. Travis’s unraveling forces Dexter to confront faith, destiny, and the limits of the Code amid mounting collateral damage.",
+    notableEpisodes: ["S06E09 'Get Geller'", "S06E12 'This Is the Way the World Ends'"],
+    img: "assets/img/travis-marshall.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "isaak-sirko",
+    name: "Isaak Sirko",
+    seasons: [7],
+    aliases: ["Viktor Baskov's avenger"],
+    summary:
+      "Ukrainian mob enforcer Isaak Sirko brings operatic vengeance to Miami after a loved one disappears. Calculated, patient, and fiercely loyal, he stalks Dexter while matching his strategic mind. Their duel reveals unexpected empathy, plunging Dexter deeper into questions about identity, grief, and sacrifice.",
+    notableEpisodes: ["S07E07 'Chemistry'", "S07E09 'Helter Skelter'"],
+    img: "assets/img/isaak-sirko.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "oliver-saxon",
+    name: "Oliver Saxon",
+    seasons: [8],
+    aliases: ["Brain Surgeon"],
+    summary:
+      "Oliver Saxon resurrects the horrors of Vogel’s early experiments, targeting victims with surgical precision. His cat-and-mouse battle with Dexter entwines family history, betrayal, and the legacy of the Code. Saxon’s relentlessness pushes Dexter toward irreversible decisions about love, freedom, and accountability.",
+    notableEpisodes: ["S08E09 'Make Your Own Kind of Music'", "S08E11 'Monkey in a Box'"],
+    img: "assets/img/oliver-saxon.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "kurt-caldwell",
+    name: "Kurt Caldwell",
+    seasons: [9],
+    aliases: ["Iron Lake benefactor"],
+    summary:
+      "Kurt Caldwell masks predatory control behind the friendly face of Iron Lake’s patron. His network of secrets threatens everyone connected to Dexter’s new life, gradually exposing a history of abductions and ritualized hunts. Kurt’s menace challenges Dexter and Harrison to decide what justice really means in exile.",
+    notableEpisodes: ["S09E05 'Runaway'", "S09E10 'Sins of the Father'"],
+    img: "assets/img/kurt-caldwell.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "lila-west",
+    name: "Lila West",
+    seasons: [2],
+    aliases: ["Lila Tournay"],
+    summary:
+      "Artist Lila West becomes Dexter’s sponsor and seductive confidant during a fragile recovery. Her obsession escalates into manipulation and arson, forcing Dexter to face the consequences of inviting someone into his darkness. Lila’s volatile presence leaves lasting scars on the people around him.",
+    notableEpisodes: ["S02E05 'The Dark Defender'", "S02E12 'The British Invasion'"],
+    img: "assets/img/lila-west.webp",
+    spoilerLevel: "high"
+  },
+  {
+    id: "george-king",
+    name: "George King",
+    seasons: [3],
+    aliases: ["The Skinner"],
+    summary:
+      "Operating under the alias The Skinner, George King kidnaps and tortures to extort information, leaving flayed victims across Miami. His hunt for a missing associate collides with Dexter’s investigation, raising the stakes for the entire homicide unit. King's ruthlessness pushes Dexter’s Code to a breaking point.",
+    notableEpisodes: ["S03E09 'About Last Night'", "S03E12 'Do You Take Dexter Morgan?'"],
+    img: "assets/img/george-king.webp",
+    spoilerLevel: "high"
+  }
+];
+
+if (typeof window !== "undefined") {
+  window.CHARACTERS = CHARACTERS;
+  window.VILLAINS = VILLAINS;
+}
+
+if (typeof module !== "undefined") {
+  module.exports = { CHARACTERS, VILLAINS };
+}
